@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+    <title>Tip Calculator App || Project</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <img class="logo" src="./images/logo.svg" alt="splitter logo" />
+      <div class="splitter">
+        <div class="left">
+          <div class="bill">
+            <p class="title-left">Bill</p>
+            <input data-bill id="bill" type="number" placeholder="0" min="0.01" />
+          </div>
+          <div class="selector">
+            <p class="title-left">Select Tip %</p>
+            <div class="selector-wrapper">
+              <div data-tip="0.05" class="tip">5%</div>
+              <div data-tip="0.1" class="tip">10%</div>
+              <div data-tip="0.15" class="tip">15%</div>
+              <div data-tip="0.25" class="tip">25%</div>
+              <div data-tip="0.5" class="tip">50%</div>
+              <input data-custom type="number" id="custom" placeholder="Custom" min="0.01" />
+            </div>
+          </div>
+          <div class="people">
+            <p class="title-left">Number of People</p>
+            <input data-people id="people" type="number" placeholder="0" min="1" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="tip-amount">
+            <p class="right-title">Tip Amount <br /><span>/ person</span></p>
+            <p data-tip-amount class="right-amount">$0.00</p>
+          </div>
+          <div class="total">
+            <p class="right-title">Total <br /><span>/ person</span></p>
+            <p data-total-amount class="right-amount">$0.00</p>
+          </div>
+          <button data-reset-button>Reset</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

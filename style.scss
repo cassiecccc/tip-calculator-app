@@ -1,0 +1,212 @@
+//colors
+$strong-cyan: hsl(172, 67%, 45%);
+$cyan-hover: hsl(173, 61, 77);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(180, 18%, 40%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(185, 38%, 97%);
+$alert: hsl(13, 70, 60);
+$white: hsl(0, 0%, 100%);
+
+//font weight
+$bold: 700;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+  background-color: $light-grayish-cyan;
+}
+
+.logo {
+  margin-bottom: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  cursor: default;
+}
+
+.splitter {
+  width: 920px;
+  height: 481px;
+  background-color: $white;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  grid-gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $dark-grayish-cyan;
+  padding: 1rem 0;
+}
+
+.title-left {
+  margin-bottom: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  font-family: "Space Mono", monospace;
+  background-color: $very-light-grayish-cyan;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 0.5rem 1rem;
+  color: $very-dark-cyan;
+  appearance: none;
+  text-align: end;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: $very-dark-cyan;
+  font-family: "Space Mono", monospace;
+  text-align: end;
+}
+
+input[type="number"]:focus {
+  outline: 2px solid $strong-cyan;
+}
+
+#bill {
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position-x: 1rem;
+  background-position-y: 50%;
+}
+
+#people {
+  background-image: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position-x: 1rem;
+  background-position-y: 50%;
+}
+
+.selector-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#custom {
+  font-family: "Space Mono", monospace;
+  color: $dark-grayish-cyan;
+  padding-right: 1rem;
+  text-align: end;
+  color: $very-dark-cyan;
+}
+
+#custom::placeholder {
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  color: $dark-grayish-cyan;
+}
+
+.tip {
+  background-color: $very-dark-cyan;
+  border-radius: 5px;
+  text-align: center;
+  color: $white;
+  padding: 0.5rem 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.tip:hover {
+  background-color: $cyan-hover;
+  color: $very-dark-cyan;
+}
+
+.right {
+  background-color: $very-dark-cyan;
+  height: 100%;
+  padding: 2.5rem;
+  border-radius: 15px;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.right-title {
+  color: $white;
+}
+
+.right-title > span {
+  color: $grayish-cyan;
+  font-size: 13px;
+}
+
+.right-amount {
+  font-size: 48px;
+  color: $strong-cyan;
+}
+button {
+  font-size: 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 8.5rem;
+  text-transform: uppercase;
+  color: $very-dark-cyan;
+  background-color: $strong-cyan;
+  border: none;
+  padding: 1rem 0;
+  font-weight: $bold;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: $cyan-hover;
+}
+
+//js active
+.active {
+  background-color: $strong-cyan;
+  color: $very-dark-cyan;
+}
+
+.alert > input[type="number"]:focus,
+.alert > input[type="number"]:enabled {
+  outline: 2px solid $alert;
+}
+
+.alert > p::after {
+  content: "Can't be zero";
+  color: $alert;
+  margin-left: 6rem;
+}
